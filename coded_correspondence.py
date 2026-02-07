@@ -24,11 +24,28 @@ print(
 print("\n")
 print("This message has an offset of 10. Can you decode it?")
 
+
 # Function Definitions
 # function that will decode a message encoded with a simple Caesar cipher
-# def caesar_decode(encoded_message, shift):
+def caesar_decode(encoded_message, shift):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    decoded_message = ""
+    for character in encoded_message:
+        if character in alphabet:
+            letter = alphabet.index(character)
+            new_letter = (letter + shift) % 26
+            decoded_message += alphabet[new_letter]
+        else:
+            decoded_message += character
+    return decoded_message
+
+
+practice_encoded_message10 = "buqhd fojxed rkybt iaybbi dem"
+# print(caesar_decode(practice_encoded_message10, 10))
 
 # function that will encode a message using a simple Caesar cipher
 
 
 encoded_message = "xuo jxuhu! jxyi yi qd unqcfbu ev q squiqh syfxuh. muhu oek qrbu je tusetu yj? y xefu ie! iudt cu q cuiiqwu rqsa myjx jxu iqcu evviuj!"
+print("The decoded encoded message is: ")
+print(caesar_decode(encoded_message, 10))
