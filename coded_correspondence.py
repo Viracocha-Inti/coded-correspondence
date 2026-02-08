@@ -83,3 +83,20 @@ print("The first message is - ", (caesar_decode(first_message, 10)))
 print("\n")
 print("The second message is - ", (caesar_decode(second_message, 14)))
 print("\n")
+print(
+    "Hello again friend! I knew you would love the Caesar Cipher, it's a cool, simple way to encrypt messages. \n"
+    "Did you know that back in Caesar's time, it was considered a very secure way of communication and it took a lot of effort to crack if you were unaware of the value of the shift? \n"
+    "That's all changed with computers! Now we can brute force these kinds of ciphers very quickly, as I'm sure you can imagine.\n"
+    "Brute force this next coded message without hints\n"
+    "Here's the coded message:\n"
+    "vhfinmxkl atox kxgwxkxw tee hy maxlx hew vbiaxkl hulhexmx. px'ee atox mh kxteer lmxi ni hnk ztfx by px ptgm mh dxxi hnk fxlltzxl ltyx."
+)
+print("\n")
+bruto_force_message = "vhfinmxkl atox kxgwxkxw tee hy maxlx hew vbiaxkl hulhexmx. px'ee atox mh kxteer lmxi ni hnk ztfx by px ptgm mh dxxi hnk fxlltzxl ltyx."
+print("Brute for message was shifted by 7:", caesar_decode(bruto_force_message, 7))
+print("\n")
+print(
+    'Hey Viracocha, look up how the Vigenere Cipher works and then make a function that will decode my following message. Also the keyword is "friends"\n'
+    "Here is the Message:\n"
+    "txm srom vkda gl lzlgzr qpdb? fepb ejac! ubr imn tapludwy mhfbz cza ruxzal wg zztylktoikqq!"
+)
