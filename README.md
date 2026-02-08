@@ -1,12 +1,12 @@
-### Coded Correspondence 
-Overview
----
-This project implements classical substitution ciphers in Python as part of the Codecademy Learn Python 3 – Off-Platform Project: Coded Correspondence.
+# Coded Correspondence 
+### Overview
 
+This project implements classical substitution ciphers in Python as part of the Codecademy Learn Python 3 – Off-Platform Project: Coded Correspondence.
 The focus is on practicing string manipulation, modular arithmetic, and breaking problems into reusable functions.
 ---
+
 ## Ciphers Implemented:
-# Caesar Cipher
+### Caesar Cipher
 
 Shifts each letter in a message by a fixed number of positions in the alphabet.
 
@@ -16,7 +16,7 @@ caesar_encode(message, shift)
 
 caesar_decode(message, shift)
 
-# Vigenère Cipher
+### Vigenère Cipher
 
 Uses a keyword to apply a different shift to each letter in the message.
 
@@ -26,7 +26,7 @@ vigenere_encode(message, keyword)
 
 vigenere_decode(message, keyword)
 
-# Helper Functions
+### Helper Functions
 
 To keep the code readable and modular, the following helpers were created:
 
@@ -36,12 +36,12 @@ number_letter(number) – converts indices back to letters
 
 keyword_shift(keyword) – converts a keyword into numeric shifts
 
-# How to Run
+### How to Run
 python3 coded_correspondence.py
 
 Modify the message, shift, or keyword in the script to test different cases.
 
-Skills Practiced
+### Skills Practiced
 
 Python functions and loops
 
