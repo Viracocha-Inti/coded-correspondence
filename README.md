@@ -1,8 +1,11 @@
 # Coded Correspondence 
-### Overview
 
+---
+
+### Overview
 This project implements classical substitution ciphers in Python as part of the Codecademy Learn Python 3 – Off-Platform Project: Coded Correspondence.
 The focus is on practicing string manipulation, modular arithmetic, and breaking problems into reusable functions.
+
 ---
 
 ## Ciphers Implemented:
