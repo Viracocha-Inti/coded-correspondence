@@ -72,11 +72,27 @@ def vigenere_decode(message, keyword):
         if letter in alphabet:
             x = letter_number(letter)
             y = shift_list[i % len(shift_list)]
-            decoded_message += number_letter((x - y) % 26)
+            decoded_message += number_letter((x + y) % 26)
             i += 1
         else:
             decoded_message += letter
     return decoded_message
+
+
+def vigenere_encode(message, keyword):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    encoded_message = ""
+    shift_list = keyword_shift(keyword)
+    i = 0
+    for letter in message.lower():
+        if letter in alphabet:
+            x = letter_number(letter)
+            y = shift_list[i % len(shift_list)]
+            encoded_message += number_letter((x - y) % 26)
+            i += 1
+        else:
+            encoded_message += letter
+    return encoded_message
 
 
 # Function that will encode a message using a simple Caesar cipher
@@ -135,5 +151,16 @@ print(
     "Here is the Message:\n"
     "txm srom vkda gl lzlgzr qpdb? fepb ejac! ubr imn tapludwy mhfbz cza ruxzal wg zztylktoikqq!"
 )
-
-print(vigenere_decode("lxfopv ef rnhr", "lemon"))
+vigenere_message = "txm srom vkda gl lzlgzr qpdb? fepb ejac! ubr imn tapludwy mhfbz cza ruxzal wg zztylktoikqq!"
+print(
+    "Using Vigenere decoded function, the message is:\n",
+    vigenere_decode(vigenere_message, "friends"),
+)
+plain_message = (
+    "Coding for this Vigenere cypher was much harder than I thought it would be!!!"
+)
+print(vigenere_encode(plain_message, "tired"))
+vigenere_pmessage = (
+    "jgmekn xxn qoab rfnwwaol uhlelj fwp tmld ehjmao azjj f azxqdol rp tvmuz yl!!!"
+)
+print(vigenere_decode(vigenere_pmessage, "tired"))
