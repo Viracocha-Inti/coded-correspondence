@@ -23,14 +23,14 @@ print(
 )
 print("\n")
 print("This message has an offset of 10. Can you decode it?")
+print("\n")
 
 
-# Function Definitions
-# function that will decode a message encoded with a simple Caesar cipher
-def caesar_decode(encoded_message, shift):
+# Function that will decode a message encoded with a simple Caesar cipher
+def caesar_decode(message, shift):
     alphabet = "abcdefghijklmnopqrstuvwxyz"
     decoded_message = ""
-    for character in encoded_message:
+    for character in message:
         if character in alphabet:
             letter = alphabet.index(character)
             new_letter = (letter + shift) % 26
@@ -43,9 +43,25 @@ def caesar_decode(encoded_message, shift):
 practice_encoded_message10 = "buqhd fojxed rkybt iaybbi dem"
 # print(caesar_decode(practice_encoded_message10, 10))
 
-# function that will encode a message using a simple Caesar cipher
+
+# Function that will encode a message using a simple Caesar cipher
+def caesar_encode(message, shift):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    coded_message = ""
+    for character in message:
+        if character in alphabet:
+            letter = alphabet.index(character)
+            new_letter = (letter - shift) % 26
+            coded_message += alphabet[new_letter]
+        else:
+            coded_message += character
+    return coded_message
 
 
 encoded_message = "xuo jxuhu! jxyi yi qd unqcfbu ev q squiqh syfxuh. muhu oek qrbu je tusetu yj? y xefu ie! iudt cu q cuiiqwu rqsa myjx jxu iqcu evviuj!"
+uncoded_message = "Hey Vishal!!! Long time no talk. Thanks for giving me the idea for this fun project. Hope you can decode it as well."
 print("The decoded encoded message is: ")
 print(caesar_decode(encoded_message, 10))
+print("\n")
+print("Hey Vishal, here is my coded message:")
+print(caesar_encode(uncoded_message, 10))
