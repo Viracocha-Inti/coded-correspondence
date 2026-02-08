@@ -44,6 +44,41 @@ practice_encoded_message10 = "buqhd fojxed rkybt iaybbi dem"
 # print(caesar_decode(practice_encoded_message10, 10))
 
 
+def letter_number(a):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    return alphabet.index(a)
+
+
+def number_letter(a):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    return alphabet[a]
+
+
+def keyword_shift(keyword):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    keyword_list = []
+    for char in keyword.lower():
+        if char in alphabet:
+            keyword_list.append(letter_number(char))
+    return keyword_list
+
+
+def vigenere_decode(message, keyword):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    decoded_message = ""
+    shift_list = keyword_shift(keyword)
+    i = 0
+    for letter in message.lower():
+        if letter in alphabet:
+            x = letter_number(letter)
+            y = shift_list[i % len(shift_list)]
+            decoded_message += number_letter((x - y) % 26)
+            i += 1
+        else:
+            decoded_message += letter
+    return decoded_message
+
+
 # Function that will encode a message using a simple Caesar cipher
 def caesar_encode(message, shift):
     alphabet = "abcdefghijklmnopqrstuvwxyz"
@@ -100,3 +135,5 @@ print(
     "Here is the Message:\n"
     "txm srom vkda gl lzlgzr qpdb? fepb ejac! ubr imn tapludwy mhfbz cza ruxzal wg zztylktoikqq!"
 )
+
+print(vigenere_decode("lxfopv ef rnhr", "lemon"))
