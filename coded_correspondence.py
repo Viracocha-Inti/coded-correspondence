@@ -65,3 +65,21 @@ print(caesar_decode(encoded_message, 10))
 print("\n")
 print("Hey Vishal, here is my coded message:")
 print(caesar_encode(uncoded_message, 10))
+print("\n")
+print(
+    "You're getting the hang of this! Okay here are two more messages, \n"
+    "the first one is coded just like before with an offset of ten, and it contains a hint for decoding the second message!"
+)
+print("First message:")
+print("jxu evviuj veh jxu iusedt cuiiqwu yi vekhjuud.")
+first_message = "jxu evviuj veh jxu iusedt cuiiqwu yi vekhjuud."
+print("Second message:")
+print("bqdradyuzs ygxfubxq omqemd oubtqde fa oapq kagd yqeemsqe ue qhqz yadq eqogdq!")
+second_message = (
+    "bqdradyuzs ygxfubxq omqemd oubtqde fa oapq kagd yqeemsqe ue qhqz yadq eqogdq!"
+)
+print("\n")
+print("The first message is - ", (caesar_decode(first_message, 10)))
+print("\n")
+print("The second message is - ", (caesar_decode(second_message, 14)))
+print("\n")
